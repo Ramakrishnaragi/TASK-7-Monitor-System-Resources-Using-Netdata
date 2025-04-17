@@ -39,7 +39,7 @@ docker run -d --name=netdata \
 
 # Using Netdata Dashboard
 - Monitor Metrics:
-  ```
+```sh
 CPU usage
 RAM & swap
 Disk I/O
@@ -52,11 +52,11 @@ Docker container stats (e.g., CPU, memory, network)
 - Alerts:
   > See active alarms and thresholds under the “Alarms” tab
 - View Logs: Inside container
- ```
+```
 docker exec -it netdata bash
 cd /var/log/netdata
 tail -f error.log
-
+```
 
 # SET UP msmtp TO SEND EMAILS FROM NETDATA (Docker Host)
 -  sudo apt update
@@ -103,7 +103,7 @@ account default : gmail
 - sudo apt update
 - sudo apt install stress -y
 - Run stress command for 60seconds
-  - stress --cpu 4 --timeout 60
+    - stress --cpu 4 --timeout 60
 
 ![image](https://github.com/user-attachments/assets/13d1a763-e17e-46fd-abf6-83545205d3ef)
 
