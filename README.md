@@ -47,10 +47,14 @@ Network interfaces
 Docker container stats (e.g., CPU, memory, network)
 ```
 - Explore Panels:
+```sh
   > Click charts to zoom in and filter
   > Use the left panel to navigate between system components
+```
 - Alerts:
+```
   > See active alarms and thresholds under the “Alarms” tab
+```
 - View Logs: Inside container
 ```
 docker exec -it netdata bash
@@ -83,9 +87,11 @@ account default : gmail
 ```
 - Set File Permissions: chmod 600 ~/.msmtprc (This protects your email credentials.)
 - Set Netdata to Use msmtp for Email:
+```
    > Inside container:
       - docker exec -it netdata bash
-      - nano /etc/netdata/health_alarm_notify.conf
+     - nano /etc/netdata/health_alarm_notify.conf
+```
   > set:
     ```sh
     SEND_EMAIL="YES"
