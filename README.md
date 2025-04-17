@@ -93,11 +93,11 @@ account default : gmail
      - nano /etc/netdata/health_alarm_notify.conf
 ```
   > set:
-    ```sh
+```sh
     SEND_EMAIL="YES"
     EMAIL_CMD="msmtp -C /etc/netdata/.msmtprc"
     DEFAULT_RECIPIENT_EMAIL="yourgmail@gmail.com"
-   ```
+```
 # Test Email from Command Line
 - Run this test:
    - echo "Test email from Netdata" | msmtp yourgmail@gmail.com
