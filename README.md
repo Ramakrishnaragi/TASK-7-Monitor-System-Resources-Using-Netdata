@@ -39,7 +39,7 @@ docker run -d --name=netdata \
 
 # Using Netdata Dashboard
 - Monitor Metrics:
-  ```sh
+  ```
 CPU usage
 RAM & swap
 Disk I/O
@@ -52,18 +52,19 @@ Docker container stats (e.g., CPU, memory, network)
 - Alerts:
   > See active alarms and thresholds under the “Alarms” tab
 - View Logs: Inside container
- ```sh
+ ```
 docker exec -it netdata bash
 cd /var/log/netdata
 tail -f error.log
-```
+
+
 # SET UP msmtp TO SEND EMAILS FROM NETDATA (Docker Host)
 -  sudo apt update
 -  sudo apt install msmtp msmtp-mta -y
 # Create a Config File for msmtp: 
 - Create the file (on the host, not in the container): nano ~/.msmtprc
 - Paste this config (replace the placeholders with your Gmail info):
-  ```sh
+```
 # Gmail SMTP configuration
 defaults
 auth           on
